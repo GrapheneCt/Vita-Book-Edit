@@ -63,7 +63,10 @@ namespace Vita_Book_Edit
                             Button btn = new Button();
                             btn.Text = mybook.title;
                             mybook.bookpath = d.FullName;
-                            btn.Size = new System.Drawing.Size(177, 250);
+                            if (mybook.model == 0)
+                                btn.Size = new System.Drawing.Size(177, 250);
+                            else if (mybook.model == 1)
+                                btn.Size = new System.Drawing.Size(250, 177);
                             btn.ForeColor = Color.BlueViolet;
                             try
                             {
